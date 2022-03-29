@@ -1,0 +1,1 @@
+print("Muj první projekt:)")
