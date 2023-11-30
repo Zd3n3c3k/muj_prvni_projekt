@@ -65,3 +65,13 @@ print("Děkuji ".upper() + jmeno + ", za objednávku".upper())
 print("cil. destinace: ".upper() + str(mesta[destinace]) + ", cena jizdného: ".upper() + str(cena_posleve))
 print("na tvůj mail: ".upper() + email + ", jsme ti poslali lístek".upper())
 print(dvojita_cara)
+
+# Uložení do souboru
+with open("objednavky.txt", mode="a") as f:
+    f.write("Jméno: " + jmeno + "\n")
+    f.write("Příjmení: " + prijmeni + "\n")
+    f.write("Email: " + email + "\n")
+    f.write("Destinace: " + mesta[destinace] + "\n")
+    f.write("Cena: " + str(cena_posleve) + "\n")
+    f.write("Děkujeme za nákup".upper())
+    f.write("\n" + dvojita_cara + "\n\n")
